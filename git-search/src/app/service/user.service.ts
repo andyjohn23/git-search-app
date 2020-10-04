@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import{ HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 
 @Injectable({
@@ -8,17 +9,22 @@ import { Observable } from 'rxjs';
 })
 export class UserService {
 
-  private profileName: string;
-  private clientId: 'f44e1ba53d6a4acdf48d';
-  private clientSecret:'fbb4ede57e725110a45dd7ff316663891ccfbd3d';
+  private userName: string;
+  private gitApi=environment.githubApi;
 
   constructor(private Http:HttpClient) {
       console.log('service is ready');
-      this.profileName = "andyjohn23";
+      this.userName = "andyjohn23";
    }
 
-   getProfile(): Observable<any>{
-     return this.Http.get<any>("https://api.github.com/users/" + this.profileName + "?client_id=" + 
-     this.clientId + "client_secret" + this.clientSecret);
+   getUser(): Observable<any>{
+     return this.Http.get<any>("https://api.github.com/users/" + this.userName + "?api_key="
+      + this.gitApi);
+   }
+
+   getUserRepo(): Observable<any>{
+    return this.Http.get<any>("https://api.github.com/users/" + this.userName + "/repos?api_key="
+     + this.gitApi);
+
    }
 }

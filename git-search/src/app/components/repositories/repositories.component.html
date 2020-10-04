@@ -1,15 +1,15 @@
 <div class=" container repositories">
     <h1>REPOSITORIES</h1>
     <div class="row">
-        <div class="col-md-12">
+        <div class=" card-container" *ngFor="let repo of repositories">
             <div class="card">
                 <img src="assets/github-logo.png" class="card-img-top" alt="card-logo">
                 <div class="card-body">
-                    Repo-Name: <span>Giphy App</span>
-                    Description: <span class="card-text">This is a giphy app that uses giphy api.</span> <br>
-                    Language: <span>Typescript</span>
-                    Created: <span>28th Sept</span> <br><br>
-                    <a href="#"><button>View</button></a>
+                    Repo-Name: <span>{{repo.name}}</span>
+                    Description: <span class="card-text">{{repo.description}}</span> <br>
+                    Language: <span>{{repo.language}}</span><br>
+                    Created: <span>{{repo.created_at}}</span> <br><br>
+                    <a href="{{repo.html_url}}" target="_blank"><button>View</button></a>
                 </div>
             </div>
         </div>

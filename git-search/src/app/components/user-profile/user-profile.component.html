@@ -1,27 +1,27 @@
 <div class="container user-content">
     <div class="user-avatar">
-        <img src="assets/back.jpg" alt="profile">
+        <img src="{{user.avatar_url}}" alt="profile">
     </div>
     <div class="user-info">
-        <p class="user-name">Andrew John <br>
-            <span>andrew john</span>
+        <p class="user-name">{{user.name}}<br>
+            <span>{{user.login}}</span>
         </p>
-
+        
         <div class="user-extra">
-            <span>50</span>&nbsp;
+            <span>{{user.public_repos}}</span>&nbsp;
             <p>Repositories</p>
             &nbsp;&nbsp;&nbsp;
 
-            <span>20</span>&nbsp;
+            <span>{{user.followers}}</span>&nbsp;
             <p>Followers</p>
             &nbsp;&nbsp;&nbsp;
 
-            <span>15</span>&nbsp;
+            <span>{{user.following}}</span>&nbsp;
             <p>Following</p>
         </div>
 
         <div class="github-button">
-            <button><img src="assets/github-logo.png" alt="button-logo">&nbsp;&nbsp;GITHUB</button>
+            <a href="{{user.html_url}}" target="_blank"><button><img src="assets/github-logo.png" alt="button-logo">&nbsp;&nbsp;GITHUB</button></a>
         </div>
     </div>
 </div>

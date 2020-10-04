@@ -8,12 +8,12 @@ import { UserService } from '../../service/user.service';
 })
 export class UserProfileComponent implements OnInit {
 
-  profile :any[] = [];
+  user: any[] = [];
 
   constructor(private userService:UserService) {
-    this.userService.getProfile().subscribe(profile => {
-      console.log(profile);
-      this.profile = profile;
+    this.userService.getUser().subscribe(user => {
+      console.log(user);
+      this.user = user;
     });
    }
 

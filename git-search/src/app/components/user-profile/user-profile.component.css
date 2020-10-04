@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     margin-top: 20%;
-    margin-left: -28%;
+    max-width: 80vw;
    
 }
 .user-avatar img{
@@ -45,9 +45,8 @@
     outline: none;
     border: none;
     border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+   
+    text-decoration: none;
 }
 .github-button button img{
     width: 20px;

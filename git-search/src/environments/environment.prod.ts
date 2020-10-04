@@ -1,5 +1,6 @@
 export const environment = {
   production: true,
+  githubApi:'a408ba6fb4f1d8d36ec9793cd3a998bca187a725',
   firebaseConfig:{
     apiKey: "AIzaSyBrviZ9mTQFcPcNnvoSTONVObHNh7eY-6Q",
     authDomain: "git-search-app.firebaseapp.com",
