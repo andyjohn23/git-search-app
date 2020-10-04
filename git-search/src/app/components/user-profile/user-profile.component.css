@@ -1,0 +1,52 @@
+.user-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 3%;
+    margin-top: 5%;
+}
+.user-avatar img{
+    width: 170px;
+    height: 170px;
+    object-fit: fill;
+    border-radius: 50%;
+}
+.user-info{
+    line-height: 20px;
+    margin-left: 5%;
+}
+.user-info .user-name{
+    font-size: 18px;
+}
+.user-info .user-name span{
+    font-size: 13px;
+}
+.user-extra{
+    display: flex;
+    flex-direction: row;
+}
+.user-extra span{
+    font-size: 14px;
+    font-weight: bolder;
+    color: black;
+}
+.user-extra p{
+    font-size: 15px;
+}
+.github-button button{
+    width: 120px;
+    height: 40px;
+    font-size: 13px;
+    font-weight: bold;
+    color: white;
+    background-color:#55B16F;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+.github-button button img{
+    width: 20px;
+    height: 20px;
+    object-fit: fill;
+}
