@@ -3,8 +3,8 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin-left: 3%;
-    margin-top: 5%;
+    margin-top: 20%;
+   
 }
 .user-avatar img{
     width: 170px;
