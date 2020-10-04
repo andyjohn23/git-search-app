@@ -45,6 +45,9 @@
     outline: none;
     border: none;
     border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .github-button button img{
     width: 20px;
