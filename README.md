@@ -8,7 +8,7 @@ This is a Github Search web application that uses the Github api tool to
 search various github users.
 
 ## LIVE SITE
-(https://giphy-app-2fbb2.firebaseapp.com/)
+
 
 ## Development server
 
