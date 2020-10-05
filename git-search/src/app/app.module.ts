@@ -3,23 +3,23 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import { UserService } from './service/user.service';
 import { HttpClientModule } from '@angular/common/http';
-import { RepositoriesComponent } from './components/repositories/repositories.component';
+import { CreateDatePipe } from './create-date.pipe';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
     UserProfileComponent,
-    RepositoriesComponent
+    CreateDatePipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]

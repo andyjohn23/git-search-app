@@ -10,21 +10,24 @@ import { environment } from 'src/environments/environment';
 export class UserService {
 
   private userName: string;
-  private gitApi=environment.githubApi;
+  private git_Id = environment.git_Id;
+  private secretCode =environment.secretCode;
 
   constructor(private Http:HttpClient) {
-      console.log('service is ready');
       this.userName = "andyjohn23";
    }
 
    getUser(): Observable<any>{
-     return this.Http.get<any>("https://api.github.com/users/" + this.userName + "?api_key="
-      + this.gitApi);
+     return this.Http.get<any>("https://api.github.com/users/" + this.userName + '?client_id=' + this.git_Id + '&client_secret=' 
+     + this.secretCode);
    }
 
    getUserRepo(): Observable<any>{
-    return this.Http.get<any>("https://api.github.com/users/" + this.userName + "/repos?api_key="
-     + this.gitApi);
+    return this.Http.get<any>("https://api.github.com/users/" + this.userName + '/repos?client_id=' + this.git_Id + '&client_secret=' 
+    + this.secretCode);
+  }
 
-   }
+  userProfileUpdate(userName){
+    this.userName = userName;
+  }
 }
