@@ -4,56 +4,58 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <form class="form">
-                <i class="fa fa-search" aria-hidden="true"></i><input class="search-bar" type="search" [(ngModel)]="userName" name="userName" (keyup)="search()" 
-                placeholder="Search Git-Search">
+                <i class="fa fa-search" aria-hidden="true"></i><input class="search-bar" type="search"
+                    [(ngModel)]="userName" name="userName" (keyup)="search()" placeholder="Search Git-Search">
             </form>
         </div>
     </nav>
 </div>
 
-<div class="container user-content">
-    <div class="user-avatar">
-        <img src="{{user.avatar_url}}" alt="profile">
-    </div>
-    <div class="user-info">
-        <p class="user-name">{{user.name}}<br>
-            <span>{{user.login}}</span>
-        </p>
-        
-        <div class="user-extra">
-            <span>{{user.public_repos}}</span>&nbsp;
-            <p>Repositories</p>
-            &nbsp;&nbsp;&nbsp;
-
-            <span>{{user.followers}}</span>&nbsp;
-            <p>Followers</p>
-            &nbsp;&nbsp;&nbsp;
-
-            <span>{{user.following}}</span>&nbsp;
-            <p>Following</p>
+<div class="container">
+    <div class="container user-content">
+        <div class="user-avatar">
+            <img src="{{user.avatar_url}}" alt="profile">
         </div>
+        <div class="user-info">
+            <p class="user-name">{{user.name}}<br>
+                <span>{{user.login}}</span>
+            </p>
 
-        <div class="github-button">
-            <a href="{{user.html_url}}" target="_blank"><button><img src="assets/github-logo.png" alt="button-logo">&nbsp;&nbsp;GITHUB</button></a>
+            <div class="user-extra">
+                <span>{{user.public_repos}}</span>&nbsp;
+                <p>Repositories</p>
+                &nbsp;&nbsp;&nbsp;
+
+                <span>{{user.followers}}</span>&nbsp;
+                <p>Followers</p>
+                &nbsp;&nbsp;&nbsp;
+
+                <span>{{user.following}}</span>&nbsp;
+                <p>Following</p>
+            </div>
+
+            <div class="github-button">
+                <a href="{{user.html_url}}" target="_blank"><button><img src="assets/github-logo.png"
+                            alt="button-logo">&nbsp;&nbsp;GITHUB</button></a>
+            </div>
         </div>
     </div>
-</div>
 
-<div class=" container repositories">
-    <h1>REPOSITORIES</h1>
-    <div class="row">
-        <div class=" card-container" *ngFor="let repo of repositories">
-            <div class="card">
-                <img src="assets/github-logo.png" class="card-img-top" alt="card-logo">
-                <div class="card-body">
-                    Repo-Name: <span>{{repo.name}}</span> <br>
-                    Description: <span class="card-text">{{repo.description | slice:0:25}}...</span> <br>
-                    Language: <span>{{repo.language}}</span><br>
-                    Created: <span>{{repo.created_at | createDate}}</span> <br><br>
-                    <a href="{{repo.html_url}}" target="_blank"><button>View</button></a>
+    <div class=" container repositories">
+        <h1>REPOSITORIES</h1>
+        <div class="row">
+            <div class=" card-container" *ngFor="let repo of repositories">
+                <div class="card">
+                    <img src="assets/github-logo.png" class="card-img-top" alt="card-logo">
+                    <div class="card-body">
+                        Repo-Name: <span>{{repo.name}}</span> <br>
+                        Description: <span class="card-text">{{repo.description | slice:0:25}}...</span> <br>
+                        Language: <span>{{repo.language}}</span><br>
+                        Created: <span>{{repo.created_at | createDate}}</span> <br><br>
+                        <a href="{{repo.html_url}}" target="_blank"><button>View</button></a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-

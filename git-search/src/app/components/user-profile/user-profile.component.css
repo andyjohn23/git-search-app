@@ -35,8 +35,10 @@
     align-items: center;
     justify-content: center;
     margin-top: 10%;
-    margin-left: 5%;
-    max-width: 80vw;
+    margin-left: -10%;
+    width: 65vw;
+    max-width: 100%;
+    max-height: 50vh;
 }
 .user-avatar img{
     width: 170px;
@@ -87,7 +89,6 @@
 .repositories{
     margin-top: 8%;
     max-width: 70vw;
-    margin-left: 20%;
 }
 .repositories h1{
    font-size: 18px;
