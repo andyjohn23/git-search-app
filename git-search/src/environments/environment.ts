@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  git_Id:'f44e1ba53d6a4acdf48d',
+  git_Id:'a408ba6fb4f1d8d36ec9793cd3a998bca187a725',
   secretCode:'fbb4ede57e725110a45dd7ff316663891ccfbd3d',
   firebaseConfig:{
     apiKey: "AIzaSyBrviZ9mTQFcPcNnvoSTONVObHNh7eY-6Q",

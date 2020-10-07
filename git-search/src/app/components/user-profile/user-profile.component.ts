@@ -8,19 +8,14 @@ import { UserService } from '../../service/user.service';
 })
 export class UserProfileComponent implements OnInit {
 
-  user = { 
-    name:'',
-    html_url:'',
-    login: '',
-    avatar_url: '',
-    public_repos: '',
-    followers: '',
-    following: '',
-    created_at: ''};
-    repositories: any[];
-    userName: string;
+  user = {
+    name: '', html_url: '', login: '', avatar_url: '', public_repos: '', followers: '', following: '',
+    created_at: ''
+  };
+  repositories: any[];
+  userName: string;
 
-  constructor(private userService:UserService) {
+  constructor(private userService: UserService) {
     this.userService.getUser().subscribe(user => {
       console.log(user);
       this.user = user;
@@ -30,9 +25,9 @@ export class UserProfileComponent implements OnInit {
       console.log(repositories);
       this.repositories = repositories;
     });
-   }
+  }
 
-   search(){
+  search() {
     this.userService.userProfileUpdate(this.userName);
     this.userService.getUser().subscribe(user => {
       console.log(user);
@@ -44,7 +39,7 @@ export class UserProfileComponent implements OnInit {
     });
 
   }
-  
+
   ngOnInit(): void {
   }
 
