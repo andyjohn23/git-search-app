@@ -7,13 +7,8 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <!-- <form class="form">
-                <i class="fa fa-search" aria-hidden="true"></i><input class="search-bar" type="search"
-                    [(ngModel)]="userName" name="userName" (keyup.Enter)="search()" placeholder="Search Git-Search">
-            </form> -->
-            <form class="d-flex search-form" action="/query" method="GET">
-                <input class="form-control me-2" type="search" id="search" name="search" type="search" placeholder="Search by title, ISBN" aria-label="Search" aria-label="Search">&nbsp;
-                <button class="btn btn-outline-dark" name="search" type="submit" id="search_button">Search</button>
+            <form class="d-flex search-form">
+                <input class="form-control me-2" type="search" [(ngModel)]="userName" name="userName" (keyup.Enter)="search()" placeholder="Search..." aria-label="Search" aria-label="Search">
             </form>
         </div>
     </nav>
